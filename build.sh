@@ -53,12 +53,12 @@ sudo chown -R www-data: /var/www/html
 echo -e "\e[32mChown Complete\e[0m"
 
 # Copy dashboard to /var/www
-cp -r "localhost/www/html" "/var/www/"
+sudo cp -r "localhost/www/html" "/var/www/"
 
 echo -e "\e[32mCopy Bludit Complete\e[0m"
 
 if [ -f "/var/www/html/index.html" ]; then
-  rm /var/www/html/index.html
+  sudo rm /var/www/html/index.html
 fi
 
 echo -e "\e[32mClean-up Complete\e[0m"
