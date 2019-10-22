@@ -15,11 +15,10 @@ The following technologies are automatically installed for you:
 2. Git installed - `sudo apt-get install git`
 
 ## Installation Instructions
-1. Add your Pi's SSH key to GitHub. [More info...](https://help.github.com/en/articles/about-ssh)
-2. Find a directory on your Pi where you'd like to install this repo
-3. Run `git clone git@github.com:mhancoc7/Bludit-Pi.git`
-4. Run `cd Bludit-Pi`
-5. Run `bash build.sh`
+1. Find a directory on your Pi where you'd like to install this repo
+2. Run `git clone https://github.com/mhancoc7/Bludit-Pi.git`
+3. Run `cd Bludit-Pi`
+4. Run `bash build.sh`
 
 ## Usage
 1. Make sure the configuration process is completed
