@@ -22,8 +22,8 @@ The following technologies are automatically installed for you:
 5. Run `bash build.sh`
 
 ## Usage
-1. Make sure the configuration process is completed and your virtual machine is ready
-2. Point your web browser to http://raspberrypi.local to view your Bludit site
+1. Make sure the configuration process is completed
+2. Point your web browser to http://raspberrypi.local (or whatever your Pi's hostname is set to) to view your Bludit site
 3. Follow the steps to complete the Bludit installation
 
 > #### `Note: All code is provided as-is without any warranty. Use at your own risk.`
