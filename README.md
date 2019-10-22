@@ -12,6 +12,7 @@ The following technologies are automatically installed for you:
 
 ## Pre-Installation
 1. Raspberry Pi with [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
+2. git installed - `sudo apt-get install git`
 
 ## Installation Instructions
 1. Find a directory on your Pi where you'd like to install this repo
