@@ -1,5 +1,5 @@
 # Bludit-Pi
-Raspberry Pi Setup for [Bludit Flat File CMS](https://www.bludit.com/)
+Raspberry Pi Setup for the [Bludit Flat File CMS](https://www.bludit.com/)
 
 The goal of this project is to create an easy way to configure and install Bludit on a Raspberry Pi. 
 
