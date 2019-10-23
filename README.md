@@ -25,5 +25,8 @@ The following technologies are automatically installed for you:
 2. Point your web browser to http://raspberrypi.local (or whatever your Pi's hostname is set to) to view your Bludit site
 3. Follow the steps to complete the Bludit installation
 
+## Note
+If you receive an error message when loading Bludit in a your web browser it could be that a step in the build process failed for some reason. It is safe to re-run the build.
+
 ## Disclaimer
 All code is provided as-is without any warranty. Use at your own risk.
