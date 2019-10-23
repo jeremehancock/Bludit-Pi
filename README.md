@@ -26,7 +26,7 @@ The following technologies are automatically installed for you:
 3. Follow the steps to complete the Bludit installation
 
 ## Note
-If you receive an error message when loading Bludit in a your web browser it could be that a step in the build process failed for some reason. It is safe to re-run the build.
+If you receive an error message when loading Bludit in your web browser it could be that a step in the build process failed for some reason. It is safe to re-run the build.
 
 ## Disclaimer
 All code is provided as-is without any warranty. Use at your own risk.
