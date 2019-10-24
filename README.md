@@ -26,7 +26,7 @@ The following technologies are automatically installed for you.
 3. Follow the steps to complete the Bludit installation
 
 ## Upgrade
-* Run `bash build.sh`
+Run `bash build.sh`
 
 > Keep in mind upgrading will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel. 
 
