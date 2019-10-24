@@ -25,10 +25,29 @@ echo -e "\e[32mExtra PHP Stuff Install Complete\e[0m"
 
 # Install misc
 sudo -E apt-get install -y vim
+sudo -E apt-get install -y unzip
 
 echo -e "\e[32mMisc Install Complete\e[0m"
 
-# Set permissions for bludit install
+# Get latest Bludit
+cd /var/www/
+sudo -E wget https://www.bludit.com/releases/bludit-latest.zip -O temp.zip;
+sudo -E unzip temp.zip 
+sudo -E rm temp.zip
+sudo -E rsync -a bludit*/ html/
+sudo -E rm -rf bludit*
+cd ~
+
+echo -e "\e[32mGrab Latest Bludit Complete\e[0m"
+
+# Remove default index.html file if it exists
+if [ -f "/var/www/html/index.html" ]; then
+  sudo rm /var/www/html/index.html
+fi
+
+echo -e "\e[32mRemove Default index.html file Complete\e[0m"
+
+# Set permissions for Bludit install
 sudo -E chown -R www-data: /var/www/html
 
 echo -e "\e[32mPermissions Update Complete\e[0m"
@@ -47,19 +66,6 @@ echo '</Directory>' | sudo -E tee -a /etc/apache2/sites-available/000-default.co
 
 echo -e "\e[32mUpdated Apache conf Complete\e[0m"
 
-# Chown /var/www/html to www-data:
-sudo chown -R www-data: /var/www/html
-
-echo -e "\e[32mChown Complete\e[0m"
-
-# Copy dashboard to /var/www
-sudo cp -r "localhost/www/html" "/var/www/"
-
-echo -e "\e[32mCopy Bludit Complete\e[0m"
-
-if [ -f "/var/www/html/index.html" ]; then
-  sudo rm /var/www/html/index.html
-fi
 
 echo -e "\e[32mClean-up Complete\e[0m"
 
