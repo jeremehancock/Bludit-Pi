@@ -58,14 +58,13 @@ sudo -E a2enmod rewrite
 echo -e "\e[32mEnable mod_rewrite Complete\e[0m"
 
 # Update Apache conf
-echo '<Directory /var/www/html>' | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-echo '    Options Indexes FollowSymLinks' | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-echo '    AllowOverride All' | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-echo '    Require all granted' | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-echo '</Directory>' | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
+sudo -E echo "<Directory /var/www/html>" >> /etc/apache2/sites-available/000-default.conf
+sudo -E echo "    Options Indexes FollowSymLinks" >> /etc/apache2/sites-available/000-default.conf
+sudo -E echo "    AllowOverride All" >> /etc/apache2/sites-available/000-default.conf
+sudo -E echo "    Require all granted" >> /etc/apache2/sites-available/000-default.conf
+sudo -E echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf
 
 echo -e "\e[32mUpdated Apache conf Complete\e[0m"
-
 
 echo -e "\e[32mClean-up Complete\e[0m"
 
