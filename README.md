@@ -28,7 +28,7 @@ The following technologies are automatically installed for you.
 ## Upgrade
 Run `bash build.sh`
 
-> Keep in mind upgrading will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel. 
+> ####  *Keep in mind upgrading will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel.*
 
 ## Note
 If you receive an error message when loading Bludit in your web browser it could be that a step in the build process failed for some reason. It is safe to re-run the build.
