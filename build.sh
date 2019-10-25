@@ -31,7 +31,7 @@ cd ~
 
 echo -e "\e[32m*************************** Remove Default Index File ******************\e[0m"
 if [ -f "/var/www/html/index.html" ]; then
-  sudo rm /var/www/html/index.html
+  sudo -E rm /var/www/html/index.html
 fi
 
 echo -e "\e[32m*************************** Set Permissions ****************************\e[0m"
