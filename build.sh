@@ -38,10 +38,10 @@ echo -e "\e[96m*************************** Enable Mod Rewrite ******************
 sudo -E a2enmod rewrite
 
 echo -e "\e[96m*************************** Update Apache Conf *************************\e[0m"
-if [ -d "/etc/apache2/sites-available/bluditpi.conf" ]; then
+if [ -f "/etc/apache2/sites-available/bluditpi.conf" ]; then
   sudo -E rm /etc/apache2/sites-available/bluditpi.conf
-  sudo -E touch /etc/apache2/sites-available/bluditpi.conf
 fi
+sudo -E touch /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "<VirtualHost *:80>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "	  DocumentRoot /var/www/html/bluditpi" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "	  ErrorLog ${APACHE_LOG_DIR}/error.log" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
