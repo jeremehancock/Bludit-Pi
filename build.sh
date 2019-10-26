@@ -49,12 +49,12 @@ sudo -E echo "	  DocumentRoot /var/www/html/bluditpi" | sudo -E tee -a /etc/apac
 sudo -E echo "	  ErrorLog ${APACHE_LOG_DIR}/error.log" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "	  CustomLog ${APACHE_LOG_DIR}/access.log combined" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "</VirtualHost>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
-
 sudo -E echo "<Directory /var/www/html/bluditpi>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "    Options Indexes FollowSymLinks" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "    AllowOverride All" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "    Require all granted" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "</Directory>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
+sudo -E a2ensite bluditpi.conf
 
 echo -e "\e[96m*************************** Restart Apache *****************************\e[0m"
 sudo -E service apache2 restart
