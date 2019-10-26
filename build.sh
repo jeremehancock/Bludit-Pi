@@ -30,11 +30,6 @@ sudo -E rsync -a bludit-*/ bluditpi/
 sudo -E rm -rf bludit-*
 cd ~
 
-echo -e "\e[96m*************************** Remove Default Index File ******************\e[0m"
-if [ -f "/var/www/html/index.html" ]; then
-  sudo -E rm /var/www/html/index.html
-fi
-
 echo -e "\e[96m*************************** Set Permissions ****************************\e[0m"
 sudo -E chown -R www-data: /var/www/html
 sudo -E chmod g+wx -R /var/www/html
@@ -43,7 +38,10 @@ echo -e "\e[96m*************************** Enable Mod Rewrite ******************
 sudo -E a2enmod rewrite
 
 echo -e "\e[96m*************************** Update Apache Conf *************************\e[0m"
-sudo -E touch /etc/apache2/sites-available/bluditpi.conf
+if [ -d "/etc/apache2/sites-available/bluditpi.conf" ]; then
+  sudo -E rm /etc/apache2/sites-available/bluditpi.conf
+  sudo -E touch /etc/apache2/sites-available/bluditpi.conf
+fi
 sudo -E echo "<VirtualHost *:80>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "	  DocumentRoot /var/www/html/bluditpi" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "	  ErrorLog ${APACHE_LOG_DIR}/error.log" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
