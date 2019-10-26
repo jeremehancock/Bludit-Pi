@@ -26,8 +26,8 @@ sudo -E wget https://www.bludit.com/releases/bludit-latest.zip -O temp.zip;
 sudo -E unzip temp.zip 
 sudo -E rm temp.zip
 sudo -E mkdir bluditpi
-sudo -E rsync -a bludit*/ bludit/
-sudo -E rm -rf bludit*
+sudo -E rsync -a bludit-*/ bluditpi/
+sudo -E rm -rf bludit-*
 cd ~
 
 echo -e "\e[96m*************************** Remove Default Index File ******************\e[0m"
