@@ -43,11 +43,12 @@ echo -e "\e[96m*************************** Enable Mod Rewrite ******************
 sudo -E a2enmod rewrite
 
 echo -e "\e[96m*************************** Update Apache Conf *************************\e[0m"
-sudo -E echo "<Directory /var/www/html/bluditpi>" | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-sudo -E echo "    Options Indexes FollowSymLinks" | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-sudo -E echo "    AllowOverride All" | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-sudo -E echo "    Require all granted" | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
-sudo -E echo "</Directory>" | sudo -E tee -a /etc/apache2/sites-available/000-default.conf
+sudo -E touch /etc/apache2/sites-available/bluditpi.conf
+sudo -E echo "<Directory /var/www/html/bluditpi>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
+sudo -E echo "    Options Indexes FollowSymLinks" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
+sudo -E echo "    AllowOverride All" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
+sudo -E echo "    Require all granted" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
+sudo -E echo "</Directory>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 
 echo -e "\e[96m*************************** Restart Apache *****************************\e[0m"
 sudo -E service apache2 restart
