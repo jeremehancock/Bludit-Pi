@@ -3,7 +3,7 @@ Raspberry Pi Setup for the [Bludit Flat File CMS](https://www.bludit.com/)
 
 The goal of this project is to create an easy way to configure and install Bludit on a Raspberry Pi. 
 
-> ####  *This build script should not be used on a Raspberry Pi that has previously had a webserver configured. This script will overwrite the "/var/www/html" directory!*
+> ####  *It is not recommended to run this script on a Raspberry Pi that has already had a webserver installed and configured!*
 
 The following technologies are automatically installed for you.
 * Apache
