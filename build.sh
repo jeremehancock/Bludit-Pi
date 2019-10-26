@@ -36,7 +36,6 @@ fi
 
 echo -e "\e[32m*************************** Set Permissions ****************************\e[0m"
 sudo -E chown -R www-data: /var/www/html
-sudo -E chown -R www-data: /var/www/html
 sudo -E chmod g+wx -R /var/www/html
 
 echo -e "\e[32m*************************** Enable Mod Rewrite *************************\e[0m"
