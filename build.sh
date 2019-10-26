@@ -54,6 +54,7 @@ sudo -E echo "    Options Indexes FollowSymLinks" | sudo -E tee -a /etc/apache2/
 sudo -E echo "    AllowOverride All" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "    Require all granted" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
 sudo -E echo "</Directory>" | sudo -E tee -a /etc/apache2/sites-available/bluditpi.conf
+sudo -E a2dissite 000-default.conf
 sudo -E a2ensite bluditpi.conf
 
 echo -e "\e[96m*************************** Restart Apache *****************************\e[0m"
